@@ -6,7 +6,8 @@ const app = express();
 const port = 3000;
 
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({ origin: '*' }));
+
 
 app.post("/sign", (req, res) => {
   const email = "geovanaag@fullstack.com";
